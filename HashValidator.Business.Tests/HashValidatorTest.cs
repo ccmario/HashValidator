@@ -1,4 +1,3 @@
-using HashValidator.Business.Tests.Examples;
 using Xunit;
 
 namespace HashValidator.Business.Tests
@@ -11,8 +10,9 @@ namespace HashValidator.Business.Tests
             var repository = new XMLRepository();
             foreach (var file in repository.GetXMLFiles())
             {
-                var calculatedHash = HashValidator.ValidateHash(file.Content).CalculatedHash;
-                Assert.True(calculatedHash.ToUpper() == file.Hash.ToUpper(), $"File: {file.Name}. Reported hash: {file.Hash}. Calculated hash: {calculatedHash}.");
+                var result = HashValidator.ValidateHash(file.Content);
+                Assert.True(result.CalculatedHash.ToUpper() == result.ReportedHash.ToUpper(), 
+                    $"File: {file.Name}. Reported hash: {result.ReportedHash}. Calculated hash: {result.CalculatedHash}.");
             }
         }
     }

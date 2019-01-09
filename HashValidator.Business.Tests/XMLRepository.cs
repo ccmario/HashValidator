@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HashValidator.Business.Tests.Examples
+namespace HashValidator.Business.Tests
 {
     public class XMLRepository
     {
