@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Examples\XMLFile01.xml" />
+    <None Remove="Examples\XMLFile02.xml" />
+    <None Remove="Examples\XMLFile03.xml" />
+    <None Remove="Examples\XMLFile04.xml" />
+    <None Remove="Examples\XMLFile05.xml" />
+    <None Remove="Examples\XMLFile06.xml" />
+    <None Remove="Examples\XMLFile07.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\XMLFile01.xml" />
+    <EmbeddedResource Include="Examples\XMLFile07.xml" />
+    <EmbeddedResource Include="Examples\XMLFile02.xml" />
+    <EmbeddedResource Include="Examples\XMLFile03.xml" />
+    <EmbeddedResource Include="Examples\XMLFile04.xml" />
+    <EmbeddedResource Include="Examples\XMLFile05.xml" />
+    <EmbeddedResource Include="Examples\XMLFile06.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HashValidator.Business\HashValidator.Business.csproj" />
+  </ItemGroup>
+
+</Project>

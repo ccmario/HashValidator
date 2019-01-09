@@ -1,0 +1,284 @@
+<loteGuiasWS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ans="http://www.ans.gov.br/padroes/tiss/schemas">
+  <ans:cabecalho>
+    <ans:identificacaoTransacao>
+      <ans:tipoTransacao>ENVIO_LOTE_GUIAS</ans:tipoTransacao>
+      <ans:sequencialTransacao>0</ans:sequencialTransacao>
+      <ans:dataRegistroTransacao>2018-05-22</ans:dataRegistroTransacao>
+      <ans:horaRegistroTransacao>16:01:25.2168075-03:00</ans:horaRegistroTransacao>
+    </ans:identificacaoTransacao>
+    <ans:origem>
+      <ans:identificacaoPrestador>
+        <ans:codigoPrestadorNaOperadora>3255</ans:codigoPrestadorNaOperadora>
+      </ans:identificacaoPrestador>
+    </ans:origem>
+    <ans:destino>
+      <ans:registroANS>999999</ans:registroANS>
+    </ans:destino>
+    <ans:Padrao>3.03.02</ans:Padrao>
+  </ans:cabecalho>
+  <ans:loteGuias>
+    <ans:numeroLote>890</ans:numeroLote>
+    <ans:guiasTISS>
+      <ans:guiaOdonto>
+        <ans:registroANS>999999</ans:registroANS>
+        <ans:numeroGuiaPrestador>20572</ans:numeroGuiaPrestador>
+        <ans:senhaAutorizacao>257671358</ans:senhaAutorizacao>
+        <ans:numeroGuiaOperadora>25767135</ans:numeroGuiaOperadora>
+        <ans:dadosBeneficiario>
+          <ans:numeroCarteira>105250002009210113</ans:numeroCarteira>
+          <ans:atendimentoRN>N</ans:atendimentoRN>
+          <ans:nomeBeneficiario>ROBERTO ROBERSVAL</ans:nomeBeneficiario>
+        </ans:dadosBeneficiario>
+        <ans:planoBeneficiario>CLASSICO</ans:planoBeneficiario>
+        <ans:numeroTelefone>99988955999</ans:numeroTelefone>
+        <ans:nomeTitular>ROBERTO ROBERSVAL</ans:nomeTitular>
+        <ans:dadosProfissionaisResponsaveis>
+          <ans:nomeProfSolic>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfSolic>
+          <ans:croSolic>99999</ans:croSolic>
+          <ans:codigoProfExec>9999</ans:codigoProfExec>
+          <ans:nomeProfExec>AV. CONTORNO</ans:nomeProfExec>
+          <ans:croExec>99999</ans:croExec>
+          <ans:ufExec>31</ans:ufExec>
+          <ans:cnesExec>9999999</ans:cnesExec>
+          <ans:nomeProfExec2>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfExec2>
+          <ans:croExec2>99999</ans:croExec2>
+          <ans:cbosExec2>223208</ans:cbosExec2>
+        </ans:dadosProfissionaisResponsaveis>
+        <ans:procedimentosExecutados>
+          <ans:procSolic>
+            <ans:codigoTabela>22</ans:codigoTabela>
+            <ans:codigoProcedimento>86000357</ans:codigoProcedimento>
+            <ans:descricaoProcedimento>Manutencao de aparelho ortodontico - aparelho fixo</ans:descricaoProcedimento>
+          </ans:procSolic>
+          <ans:denteRegiao>
+            <ans:codRegiao>ASAI</ans:codRegiao>
+          </ans:denteRegiao>
+          <ans:qtdProc>1</ans:qtdProc>
+          <ans:valorProc>100.00</ans:valorProc>
+          <ans:autorizado>true</ans:autorizado>
+          <ans:dataRealizacao>2018-04-05</ans:dataRealizacao>
+        </ans:procedimentosExecutados>
+        <ans:tipoAtendimento>4</ans:tipoAtendimento>
+        <ans:tipoFaturamento>1</ans:tipoFaturamento>
+        <ans:valorTotalProc>100.00</ans:valorTotalProc>
+      </ans:guiaOdonto>
+      <ans:guiaOdonto>
+        <ans:registroANS>999999</ans:registroANS>
+        <ans:numeroGuiaPrestador>20575</ans:numeroGuiaPrestador>
+        <ans:senhaAutorizacao>257672087</ans:senhaAutorizacao>
+        <ans:numeroGuiaOperadora>25767208</ans:numeroGuiaOperadora>
+        <ans:dadosBeneficiario>
+          <ans:numeroCarteira>105250031672010102</ans:numeroCarteira>
+          <ans:atendimentoRN>N</ans:atendimentoRN>
+          <ans:nomeBeneficiario>ROBERTO ROBERSVAL DUQUE</ans:nomeBeneficiario>
+        </ans:dadosBeneficiario>
+        <ans:planoBeneficiario>EXECUTIVO</ans:planoBeneficiario>
+        <ans:numeroTelefone>9999999999</ans:numeroTelefone>
+        <ans:nomeTitular>ROBERTO ROBERSVAL DUQUE</ans:nomeTitular>
+        <ans:dadosProfissionaisResponsaveis>
+          <ans:nomeProfSolic>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfSolic>
+          <ans:croSolic>14952</ans:croSolic>
+          <ans:codigoProfExec>3255</ans:codigoProfExec>
+          <ans:nomeProfExec>AV. CONTORNO</ans:nomeProfExec>
+          <ans:croExec>99999</ans:croExec>
+          <ans:ufExec>31</ans:ufExec>
+          <ans:cnesExec>9999999</ans:cnesExec>
+          <ans:nomeProfExec2>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfExec2>
+          <ans:croExec2>99999</ans:croExec2>
+          <ans:cbosExec2>223208</ans:cbosExec2>
+        </ans:dadosProfissionaisResponsaveis>
+        <ans:procedimentosExecutados>
+          <ans:procSolic>
+            <ans:codigoTabela>22</ans:codigoTabela>
+            <ans:codigoProcedimento>86000357</ans:codigoProcedimento>
+            <ans:descricaoProcedimento>Manutencao de aparelho ortodontico - aparelho fixo</ans:descricaoProcedimento>
+          </ans:procSolic>
+          <ans:denteRegiao>
+            <ans:codRegiao>ASAI</ans:codRegiao>
+          </ans:denteRegiao>
+          <ans:qtdProc>1</ans:qtdProc>
+          <ans:valorProc>100.00</ans:valorProc>
+          <ans:autorizado>true</ans:autorizado>
+          <ans:dataRealizacao>2018-04-05</ans:dataRealizacao>
+        </ans:procedimentosExecutados>
+        <ans:tipoAtendimento>4</ans:tipoAtendimento>
+        <ans:tipoFaturamento>1</ans:tipoFaturamento>
+        <ans:valorTotalProc>100.00</ans:valorTotalProc>
+      </ans:guiaOdonto>
+      <ans:guiaOdonto>
+        <ans:registroANS>999999</ans:registroANS>
+        <ans:numeroGuiaPrestador>20796</ans:numeroGuiaPrestador>
+        <ans:senhaAutorizacao>257726438</ans:senhaAutorizacao>
+        <ans:numeroGuiaOperadora>25772643</ans:numeroGuiaOperadora>
+        <ans:dadosBeneficiario>
+          <ans:numeroCarteira>101150003802110105</ans:numeroCarteira>
+          <ans:atendimentoRN>N</ans:atendimentoRN>
+          <ans:nomeBeneficiario>MARIA MARIAH</ans:nomeBeneficiario>
+        </ans:dadosBeneficiario>
+        <ans:planoBeneficiario>CLASSICO</ans:planoBeneficiario>
+        <ans:numeroTelefone>99987913999</ans:numeroTelefone>
+        <ans:nomeTitular>MARIA MARIAH</ans:nomeTitular>
+        <ans:dadosProfissionaisResponsaveis>
+          <ans:nomeProfSolic>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfSolic>
+          <ans:croSolic>14952</ans:croSolic>
+          <ans:codigoProfExec>3255</ans:codigoProfExec>
+          <ans:nomeProfExec>AV. CONTORNO</ans:nomeProfExec>
+          <ans:croExec>99999</ans:croExec>
+          <ans:ufExec>31</ans:ufExec>
+          <ans:cnesExec>9999999</ans:cnesExec>
+          <ans:nomeProfExec2>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfExec2>
+          <ans:croExec2>99999</ans:croExec2>
+          <ans:cbosExec2>223208</ans:cbosExec2>
+        </ans:dadosProfissionaisResponsaveis>
+        <ans:procedimentosExecutados>
+          <ans:procSolic>
+            <ans:codigoTabela>22</ans:codigoTabela>
+            <ans:codigoProcedimento>86000357</ans:codigoProcedimento>
+            <ans:descricaoProcedimento>Manutencao de aparelho ortodontico - aparelho fixo</ans:descricaoProcedimento>
+          </ans:procSolic>
+          <ans:denteRegiao>
+            <ans:codRegiao>ASAI</ans:codRegiao>
+          </ans:denteRegiao>
+          <ans:qtdProc>1</ans:qtdProc>
+          <ans:valorProc>100.00</ans:valorProc>
+          <ans:autorizado>true</ans:autorizado>
+          <ans:dataRealizacao>2018-04-09</ans:dataRealizacao>
+        </ans:procedimentosExecutados>
+        <ans:tipoAtendimento>4</ans:tipoAtendimento>
+        <ans:tipoFaturamento>1</ans:tipoFaturamento>
+        <ans:valorTotalProc>100.00</ans:valorTotalProc>
+      </ans:guiaOdonto>
+      <ans:guiaOdonto>
+        <ans:registroANS>999999</ans:registroANS>
+        <ans:numeroGuiaPrestador>20797</ans:numeroGuiaPrestador>
+        <ans:senhaAutorizacao>257726519</ans:senhaAutorizacao>
+        <ans:numeroGuiaOperadora>25772651</ans:numeroGuiaOperadora>
+        <ans:dadosBeneficiario>
+          <ans:numeroCarteira>101150003802210141</ans:numeroCarteira>
+          <ans:atendimentoRN>N</ans:atendimentoRN>
+          <ans:nomeBeneficiario>ROBERTO ROBERSVAL DUQUE</ans:nomeBeneficiario>
+        </ans:dadosBeneficiario>
+        <ans:planoBeneficiario>CLASSICO</ans:planoBeneficiario>
+        <ans:numeroTelefone>99987913999</ans:numeroTelefone>
+        <ans:nomeTitular>ROBERTO ROBERSVAL DUQUE</ans:nomeTitular>
+        <ans:dadosProfissionaisResponsaveis>
+          <ans:nomeProfSolic>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfSolic>
+          <ans:croSolic>14952</ans:croSolic>
+          <ans:codigoProfExec>3255</ans:codigoProfExec>
+          <ans:nomeProfExec>AV. CONTORNO</ans:nomeProfExec>
+          <ans:croExec>99999</ans:croExec>
+          <ans:ufExec>31</ans:ufExec>
+          <ans:cnesExec>9999999</ans:cnesExec>
+          <ans:nomeProfExec2>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfExec2>
+          <ans:croExec2>99999</ans:croExec2>
+          <ans:cbosExec2>223208</ans:cbosExec2>
+        </ans:dadosProfissionaisResponsaveis>
+        <ans:procedimentosExecutados>
+          <ans:procSolic>
+            <ans:codigoTabela>22</ans:codigoTabela>
+            <ans:codigoProcedimento>86000357</ans:codigoProcedimento>
+            <ans:descricaoProcedimento>Manutencao de aparelho ortodontico - aparelho fixo</ans:descricaoProcedimento>
+          </ans:procSolic>
+          <ans:denteRegiao>
+            <ans:codRegiao>ASAI</ans:codRegiao>
+          </ans:denteRegiao>
+          <ans:qtdProc>1</ans:qtdProc>
+          <ans:valorProc>100.00</ans:valorProc>
+          <ans:autorizado>true</ans:autorizado>
+          <ans:dataRealizacao>2018-04-09</ans:dataRealizacao>
+        </ans:procedimentosExecutados>
+        <ans:tipoAtendimento>4</ans:tipoAtendimento>
+        <ans:tipoFaturamento>1</ans:tipoFaturamento>
+        <ans:valorTotalProc>100.00</ans:valorTotalProc>
+      </ans:guiaOdonto>
+      <ans:guiaOdonto>
+        <ans:registroANS>999999</ans:registroANS>
+        <ans:numeroGuiaPrestador>21050</ans:numeroGuiaPrestador>
+        <ans:senhaAutorizacao>257816003</ans:senhaAutorizacao>
+        <ans:numeroGuiaOperadora>25781600</ans:numeroGuiaOperadora>
+        <ans:dadosBeneficiario>
+          <ans:numeroCarteira>105250008977210193</ans:numeroCarteira>
+          <ans:atendimentoRN>N</ans:atendimentoRN>
+          <ans:nomeBeneficiario>MARIA MARIAH</ans:nomeBeneficiario>
+        </ans:dadosBeneficiario>
+        <ans:planoBeneficiario>EXECUTIVO</ans:planoBeneficiario>
+        <ans:numeroTelefone>99991094922</ans:numeroTelefone>
+        <ans:nomeTitular>MARIA MARIAH</ans:nomeTitular>
+        <ans:dadosProfissionaisResponsaveis>
+          <ans:nomeProfSolic>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfSolic>
+          <ans:croSolic>14952</ans:croSolic>
+          <ans:codigoProfExec>3255</ans:codigoProfExec>
+          <ans:nomeProfExec>AV. CONTORNO</ans:nomeProfExec>
+          <ans:croExec>99999</ans:croExec>
+          <ans:ufExec>31</ans:ufExec>
+          <ans:cnesExec>9999999</ans:cnesExec>
+          <ans:nomeProfExec2>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfExec2>
+          <ans:croExec2>99999</ans:croExec2>
+          <ans:cbosExec2>223208</ans:cbosExec2>
+        </ans:dadosProfissionaisResponsaveis>
+        <ans:procedimentosExecutados>
+          <ans:procSolic>
+            <ans:codigoTabela>22</ans:codigoTabela>
+            <ans:codigoProcedimento>86000357</ans:codigoProcedimento>
+            <ans:descricaoProcedimento>Manutencao de aparelho ortodontico - aparelho fixo</ans:descricaoProcedimento>
+          </ans:procSolic>
+          <ans:denteRegiao>
+            <ans:codRegiao>ASAI</ans:codRegiao>
+          </ans:denteRegiao>
+          <ans:qtdProc>1</ans:qtdProc>
+          <ans:valorProc>100.00</ans:valorProc>
+          <ans:autorizado>true</ans:autorizado>
+          <ans:dataRealizacao>2018-04-16</ans:dataRealizacao>
+        </ans:procedimentosExecutados>
+        <ans:tipoAtendimento>4</ans:tipoAtendimento>
+        <ans:tipoFaturamento>1</ans:tipoFaturamento>
+        <ans:valorTotalProc>100.00</ans:valorTotalProc>
+      </ans:guiaOdonto>
+      <ans:guiaOdonto>
+        <ans:registroANS>999999</ans:registroANS>
+        <ans:numeroGuiaPrestador>21132</ans:numeroGuiaPrestador>
+        <ans:senhaAutorizacao>257838902</ans:senhaAutorizacao>
+        <ans:numeroGuiaOperadora>25783890</ans:numeroGuiaOperadora>
+        <ans:dadosBeneficiario>
+          <ans:numeroCarteira>101101015165210159</ans:numeroCarteira>
+          <ans:atendimentoRN>N</ans:atendimentoRN>
+          <ans:nomeBeneficiario>ROBERTO ROBERSVAL DUQUE</ans:nomeBeneficiario>
+          <ans:numeroCNS>898004642451422</ans:numeroCNS>
+        </ans:dadosBeneficiario>
+        <ans:planoBeneficiario>CLASSICO</ans:planoBeneficiario>
+        <ans:numeroTelefone>99986430878</ans:numeroTelefone>
+        <ans:nomeTitular>ROBERTO ROBERSVAL DUQUE</ans:nomeTitular>
+        <ans:dadosProfissionaisResponsaveis>
+          <ans:nomeProfSolic>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfSolic>
+          <ans:croSolic>14952</ans:croSolic>
+          <ans:codigoProfExec>3255</ans:codigoProfExec>
+          <ans:nomeProfExec>AV. CONTORNO</ans:nomeProfExec>
+          <ans:croExec>99999</ans:croExec>
+          <ans:ufExec>31</ans:ufExec>
+          <ans:cnesExec>9999999</ans:cnesExec>
+          <ans:nomeProfExec2>ASSOCIADOS &amp; ASSOCIADOS ODONTOLOGIA LTDA</ans:nomeProfExec2>
+          <ans:croExec2>99999</ans:croExec2>
+          <ans:cbosExec2>223208</ans:cbosExec2>
+        </ans:dadosProfissionaisResponsaveis>
+        <ans:procedimentosExecutados>
+          <ans:procSolic>
+            <ans:codigoTabela>22</ans:codigoTabela>
+            <ans:codigoProcedimento>86000357</ans:codigoProcedimento>
+            <ans:descricaoProcedimento>Manutencao de aparelho ortodontico - aparelho fixo</ans:descricaoProcedimento>
+          </ans:procSolic>
+          <ans:denteRegiao>
+            <ans:codRegiao>ASAI</ans:codRegiao>
+          </ans:denteRegiao>
+          <ans:qtdProc>1</ans:qtdProc>
+          <ans:valorProc>100.00</ans:valorProc>
+          <ans:autorizado>true</ans:autorizado>
+          <ans:dataRealizacao>2018-04-16</ans:dataRealizacao>
+        </ans:procedimentosExecutados>
+        <ans:tipoAtendimento>4</ans:tipoAtendimento>
+        <ans:tipoFaturamento>1</ans:tipoFaturamento>
+        <ans:valorTotalProc>100.00</ans:valorTotalProc>
+      </ans:guiaOdonto>
+    </ans:guiasTISS>
+  </ans:loteGuias>
+  <ans:hash>b75816dfeb3f5d5b9d8d233a8d50a786</ans:hash>
+</loteGuiasWS>
