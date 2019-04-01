@@ -23,6 +23,6 @@ ser acessado via API com as orientações abaixo:
   * Endereço: http://hash-validator.herokuapp.com/api/hash
   * Verbo: POST
   * Body: Raw (Text)
-  * Response: basta enviar a mensagem TISS completa no corpo da requisição que será retornada uma resposta JSON com o HASH informado, HASH calculado e o conteúdo extraído da mensagem que foi considerado no cpalculo do HASH.
+  * Response: basta enviar a mensagem TISS completa no corpo da requisição que será retornada uma resposta JSON com o HASH informado, HASH calculado e o conteúdo extraído da mensagem que foi considerado no cálculo do HASH.
   
 A principal premissa é de que a mensagem XML esteja bem formada, mas não se exige necessariamente que ela obedeça ao XSD publicado pela ANS (apesar disto ser, obviamente, altamente recomendado).
