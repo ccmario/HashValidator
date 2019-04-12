@@ -23,4 +23,4 @@ RUN dotnet publish "HashValidatorApp.csproj" -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "HashValidatorApp.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet HashValidatorApp.dll
