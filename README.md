@@ -6,7 +6,7 @@ Aplicativo Angular padrão utilizando ASP NET CORE 2.2.
 
 ## Objetivo
 A finalidade deste repositório é demonstrar uma maneira de se calcular o HASH de mensagens XML´s trafegadas no padrão TISS conforme requisitos definidos pela ANS na documentação oficial disponível em 
-http://www.ans.gov.br/prestadores/tiss-troca-de-informacao-de-saude-suplementar/padrao-tiss-fevereiro-2019 (versão TISS 3.04.00).
+http://www.ans.gov.br/prestadores/tiss-troca-de-informacao-de-saude-suplementar/padrao-tiss-fevereiro-2019.
 
 ## HASH MD-5
 
