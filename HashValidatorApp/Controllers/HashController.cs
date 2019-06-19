@@ -18,7 +18,7 @@ namespace HashValidatorApp.Controllers
         public async Task<JsonResult> Post()
         {
             string xmlContent;
-            using (StreamReader reader = new StreamReader(Request.Body, Encoding.UTF8))
+            using (StreamReader reader = new StreamReader(Request.Body, Encoding.GetEncoding("ISO-8859-1")))
             {
                 xmlContent = await reader.ReadToEndAsync();
             }
