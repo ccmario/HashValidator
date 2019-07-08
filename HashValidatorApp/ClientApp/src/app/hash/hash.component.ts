@@ -1,16 +1,16 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Component({
   selector: 'app-hash-component',
   templateUrl: './hash.component.html'
 })
-
 export class HashComponent implements OnInit {
   private http: HttpClient;
   private baseUrl: string;
   private reader: FileReader;
-  public hashResult;
+  public hashResult: HashResult;
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this.baseUrl = baseUrl + 'api/Hash';
@@ -22,7 +22,7 @@ export class HashComponent implements OnInit {
 
   validateFile() {
     const headerOptions = new HttpHeaders({ 'Content-Type': 'application/raw' });
-    var body = (<HTMLInputElement>document.getElementById("file-content")).value;
+    const body = (<HTMLInputElement>document.getElementById('file-content')).value;
     this.http.post<HashResult>(this.baseUrl, body, {
       headers: headerOptions
     })
@@ -32,13 +32,13 @@ export class HashComponent implements OnInit {
       });
   }
 
-  fileUpload(event) {
+  fileUpload(event: { srcElement: { files: Blob[]; }; }) {
     this.reader.readAsText(event.srcElement.files[0], 'ISO-8859-1');
     this.reader.onloadend = () => this.loadFile();
   }
 
   loadFile() {
-    (<HTMLInputElement>document.getElementById("file-content")).value = this.reader.result.toString();
+    (<HTMLInputElement>document.getElementById('file-content')).value = this.reader.result.toString();
   }
 }
 
