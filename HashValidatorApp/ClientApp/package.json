@@ -1,5 +1,5 @@
 {
-  "name": "HashValidator",
+  "name": "hash-validator",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
