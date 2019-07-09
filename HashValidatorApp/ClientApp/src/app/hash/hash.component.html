@@ -1,25 +1,22 @@
 <h1>Validação de HASH</h1>
 
 <p>Selecione um arquivo TISS bem formado:</p>
-<input id="file-upload"
-       type="file"
-       accept=".xml"
-       (change)="fileUpload($event)">
+<input id="file-upload" type="file" accept=".xml" (change)="fileUpload($event)">
 <br><br>
 <div ng-app>
   <textarea type=text id="file-content" rows="20" cols="200"></textarea>
 </div><br>
 <button class="btn btn-info" id="validate-file" (click)="validateFile()">Validar</button>
 <br><br>
-    <h4>
-      <label>Hash informado:</label>
-      <label id="reported-hash">{{ hashResult.reportedHash }}</label>
-      <br />
-      <label>Hash calculado :</label>
-      <label id="calculated-hash">{{ hashResult.calculatedHash }}</label>
-      <br /><br />
-      <label>Conteúdo do arquivo:</label><label></label>
-    </h4>
-    <textarea type=text id="hash-content" rows="10" cols="200" readonly="readonly">{{ hashResult.content }}</textarea>
-
-
+<h4>
+  <div [style.color]="hashResult.reportedHash == hashResult.calculatedHash ? 'green' : 'red'">
+    <label>Hash informado:</label>
+    <label id="reported-hash">{{ hashResult.reportedHash }}</label>
+    <br />
+    <label>Hash calculado :</label>
+    <label id="calculated-hash">{{ hashResult.calculatedHash }}</label>
+    <br /><br />
+  </div>
+  <label>Conteúdo do arquivo:</label><label></label>
+</h4>
+<textarea type=text id="hash-content" rows="10" cols="200" readonly="readonly">{{ hashResult.content }}</textarea>
