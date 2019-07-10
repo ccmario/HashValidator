@@ -35,6 +35,7 @@ export class HashComponent implements OnInit {
   fileUpload(event: { srcElement: { files: Blob[]; }; }) {
     this.reader.readAsText(event.srcElement.files[0], 'ISO-8859-1');
     this.reader.onloadend = () => this.loadFile();
+    this.hashResult = null;
   }
 
   loadFile() {

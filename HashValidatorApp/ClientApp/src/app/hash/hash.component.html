@@ -1,24 +1,29 @@
 <h1>Validação de HASH</h1>
 
-<p>Selecione um arquivo TISS bem formado:</p>
-<input id="file-upload" type="file" accept=".xml" (change)="fileUpload($event)" class="btn btn-info">
+<button type="button" (click)="fileInput.click()" class="btn btn-primary" data-toggle="tooltip"
+  title="O arquivo selecionado deve estar bem formado">
+  <span>Selecione um arquivo TISS</span>
+  <input id=" file-upload" #fileInput type="file" (change)="fileUpload($event)" style="display:none;" accept=".xml" />
+</button>
 <br><br>
 <div ng-app>
-  <textarea type=text id="file-content" rows="20" cols="200"></textarea>
+  <textarea type=text id="file-content" rows="20" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off"
+    spellcheck="false"></textarea>
 </div><br>
-<button class="btn btn-info" id="validate-file" (click)="validateFile()">Validar</button>
+<button class="btn btn-primary" id="validate-file" (click)="validateFile()">Validar</button>
 <br><br>
-<h4>
-  <div *ngIf="hashResult?.calculatedHash?.length > 0"
-    [style.color]="hashResult?.reportedHash == hashResult?.calculatedHash ? 'green' : 'red'">
-    <label>Hash informado:</label>
-    <label id="reported-hash">{{ hashResult?.reportedHash }}</label>
-    <br />
-    <label>Hash calculado :</label>
-    <label id="calculated-hash">{{ hashResult?.calculatedHash }}</label>
-    <br /><br />
-  </div>
-  <label *ngIf="hashResult?.calculatedHash?.length > 0">Conteúdo do arquivo:</label>
-</h4>
-<textarea *ngIf="hashResult?.calculatedHash?.length > 0" type=text id="hash-content" rows="10" cols="200"
-  readonly="readonly">{{ hashResult?.content }}</textarea>
+<div *ngIf="hashResult?.calculatedHash?.length > 0">
+  <h4>
+    <div [style.color]="hashResult?.reportedHash == hashResult?.calculatedHash ? 'green' : 'red'">
+      <label>Hash informado:</label>
+      <label id="reported-hash">{{ hashResult?.reportedHash }}</label>
+      <br />
+      <label>Hash calculado :</label>
+      <label id="calculated-hash">{{ hashResult?.calculatedHash }}</label>
+      <br /><br />
+    </div>
+    <label>Conteúdo extraído do arquivo:</label>
+  </h4>
+  <textarea type=text id="hash-content" rows="10" cols="200" readonly="readonly" autocomplete="off" autocorrect="off"
+    autocapitalize="off" spellcheck="false" [style.color]="'gray'">{{ hashResult?.content }}</textarea>
+</div>
