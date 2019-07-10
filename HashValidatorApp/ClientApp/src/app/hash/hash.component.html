@@ -3,7 +3,7 @@
 <button type="button" (click)="fileInput.click()" class="btn btn-primary" data-toggle="tooltip"
   title="O arquivo selecionado deve estar bem formado">
   <span>Selecione um arquivo TISS</span>
-  <input id=" file-upload" #fileInput type="file" (change)="fileUpload($event)" style="display:none;" accept=".xml" />
+  <input #fileInput type="file" (change)="fileUpload($event)" style="display:none;" accept=".xml" />
 </button>
 <br><br>
 <div ng-app>
