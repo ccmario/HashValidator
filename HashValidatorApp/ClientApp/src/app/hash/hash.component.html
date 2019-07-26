@@ -15,9 +15,15 @@
 <div *ngIf="hashResult?.calculatedHash?.length > 0">
   <h4>
     <div [style.color]="hashResult?.reportedHash == hashResult?.calculatedHash ? 'green' : 'red'">
+      <i
+        [class]="hashResult?.calculatedHash == hashResult?.reportedHash ? 'fas fa-check-circle' : 'fas fa-times-circle' "></i>
+      &nbsp;
       <label>Hash informado:</label>
       <label id="reported-hash">{{ hashResult?.reportedHash }}</label>
       <br />
+      <i
+        [class]="hashResult?.calculatedHash == hashResult?.reportedHash ? 'fas fa-check-circle' : 'fas fa-times-circle' ">
+      </i> &nbsp;
       <label>Hash calculado :</label>
       <label id="calculated-hash">{{ hashResult?.calculatedHash }}</label>
       <br /><br />
