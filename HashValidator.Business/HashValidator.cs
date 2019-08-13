@@ -66,7 +66,9 @@ namespace HashValidator.Business
         private static Stream ConvertToStream(string xml)
         {
             if (!xml.TrimStart().StartsWith("<?xml"))
+            {
                 xml = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>" + xml;
+            }
 
             var stream = new MemoryStream();
             var writer = new StreamWriter(stream, _defaultEnconding);
@@ -82,15 +84,7 @@ namespace HashValidator.Business
             var xml = stream.CreateXDocument();
             var xmlNamespace = GetNamespace(xml);
 
-            string reportedHash;
-            try
-            {
-                reportedHash = xml.Descendants(xmlNamespace + "hash").First().Value;
-            }
-            catch
-            {
-                reportedHash = string.Empty;
-            }
+            string reportedHash = xml.Descendants(xmlNamespace + "hash").FirstOrDefault()?.Value ?? string.Empty;
 
             var calculatedHash = GenerateHash(xml, xmlNamespace);
 
