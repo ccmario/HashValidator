@@ -5,8 +5,8 @@ Exemplo de aplicativo para cálculo de HASH de mensagem XML no padrão TISS.
 Aplicativo Angular padrão utilizando ASP NET CORE 2.2.
 
 ## Objetivo
-A finalidade deste repositório é demonstrar uma maneira de se calcular o HASH de mensagens XML´s trafegadas no padrão TISS conforme requisitos definidos pela ANS na documentação oficial disponível em 
-http://www.ans.gov.br/prestadores/tiss-troca-de-informacao-de-saude-suplementar/padrao-tiss-maio-2019.
+A finalidade deste repositório é demonstrar uma maneira de se calcular o HASH de mensagens XML´s trafegadas no padrão TISS conforme requisitos definidos pela ANS na documentação oficial (disponível em 
+http://www.ans.gov.br/prestadores/tiss-troca-de-informacao-de-saude-suplementar/padrao-tiss-maio-2019).
 
 ## HASH MD-5
 
@@ -25,4 +25,4 @@ ser acessado via API com as orientações abaixo:
   * Body: Raw (Text)
   * Response: basta enviar a mensagem TISS completa no corpo da requisição que será retornada uma resposta JSON com o HASH informado, HASH calculado e o conteúdo extraído da mensagem que foi considerado no cálculo do HASH.
   
-A principal premissa é de que a mensagem XML esteja bem formada, mas não se exige necessariamente que ela obedeça ao XSD publicado pela ANS (apesar disto ser, obviamente, altamente recomendado).
+A principal premissa é de que a mensagem XML esteja bem formada, mas não se exige necessariamente que ela obedeça ao XSD publicado pela ANS (apesar disto ser, obviamente, o esperado).
