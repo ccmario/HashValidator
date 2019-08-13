@@ -14,7 +14,7 @@ Um hash é uma sequência de bits gerada por um algoritmo de dispersão que perm
 
 Na comunicação TISS, o HASH é utilizado para garantir a integridade da mensagem e segundo a ANS seu cálculo deve obedecer aos seguintes critérios:
 
-_No Padrão TISS o cálculo do hash deve considerar apenas a concatenação do conteúdo das tags desprezando as tags XML propriamente ditas. O conteúdo das tags deve ser concatenado e considerado de forma literal, desde o primeiro caracter à esquerda até o último caracter à direita, sem qualquer inserção, supressão, modificação ou ajuste, respeitando maiúsculas e minúsculas, pontuação, acentuação
+> _No Padrão TISS o cálculo do hash deve considerar apenas a concatenação do conteúdo das tags desprezando as tags XML propriamente ditas. O conteúdo das tags deve ser concatenado e considerado de forma literal, desde o primeiro caracter à esquerda até o último caracter à direita, sem qualquer inserção, supressão, modificação ou ajuste, respeitando maiúsculas e minúsculas, pontuação, acentuação
 e caracteres especiais, mesmo invisíveis que eventualmente existam (CR,LF,tabs etc). O encoding a ser utilizado será sempre o ISO-8859-1._
 
 ## Como usar
