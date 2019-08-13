@@ -8,17 +8,15 @@ namespace HashValidator.Business
     public class HashValidator
     {
         private static readonly Encoding _defaultEnconding = Encoding.GetEncoding("iso-8859-1");
-        private static string _content;
+        private static readonly string _urlSchema = "http://www.ans.gov.br/padroes/tiss/schemas";
 
-        private static string GenerateHash(XDocument xml, XNamespace xmlNamespace)
+        private static HashResult GenerateHashResult(XDocument xml, XNamespace xmlNamespace)
         {
             try
             {
-                using (var content = GenerateHashContent(xml, xmlNamespace))
-                {
-                    var calculatedHash = content.CalculateMd5();
-                    return calculatedHash;
-                }
+                var reportedHash = xml.Descendants(xmlNamespace + "hash").FirstOrDefault()?.Value ?? string.Empty;
+                var contentHash = GenerateHashContent(xml, xmlNamespace);
+                return new HashResult(reportedHash, contentHash.CalculateMd5(), contentHash.ConvertToText(_defaultEnconding));
             }
             finally
             {
@@ -42,19 +40,15 @@ namespace HashValidator.Business
             streamWriter.Flush();
             memoryStream.Flush();
 
-            memoryStream.Position = 0;
-            _content = memoryStream.ConvertToText(_defaultEnconding);
-            memoryStream.Position = 0;
-
             return memoryStream;
         }
 
         private static XNamespace GetNamespace(XDocument xml)
         {
             var prefix =
-                string.IsNullOrEmpty(xml.Root.GetPrefixOfNamespace("http://www.ans.gov.br/padroes/tiss/schemas"))
+                string.IsNullOrEmpty(xml.Root.GetPrefixOfNamespace(_urlSchema))
                     ? string.Empty
-                    : xml.Root.GetPrefixOfNamespace("http://www.ans.gov.br/padroes/tiss/schemas");
+                    : xml.Root.GetPrefixOfNamespace(_urlSchema);
 
             var ns = prefix.Equals(string.Empty)
                 ? xml.Root.GetDefaultNamespace()
@@ -63,32 +57,10 @@ namespace HashValidator.Business
             return ns;
         }
 
-        private static Stream ConvertToStream(string xml)
-        {
-            if (!xml.TrimStart().StartsWith("<?xml"))
-            {
-                xml = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>" + xml;
-            }
-
-            var stream = new MemoryStream();
-            var writer = new StreamWriter(stream, _defaultEnconding);
-            writer.Write(xml);
-            writer.Flush();
-            stream.Position = 0;
-            return stream;
-        }
-
         public static HashResult ValidateHash(string xmlString)
         {
-            var stream = ConvertToStream(xmlString);
-            var xml = stream.CreateXDocument();
-            var xmlNamespace = GetNamespace(xml);
-
-            string reportedHash = xml.Descendants(xmlNamespace + "hash").FirstOrDefault()?.Value ?? string.Empty;
-
-            var calculatedHash = GenerateHash(xml, xmlNamespace);
-
-            return new HashResult(reportedHash, calculatedHash, _content);
+            var xml = xmlString.CreateXDocument(_defaultEnconding);
+            return GenerateHashResult(xml, GetNamespace(xml));
         }
 
     }

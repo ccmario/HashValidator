@@ -16,6 +16,7 @@ namespace HashValidator.Business
 
         public static string CalculateMd5(this Stream stream)
         {
+            stream.Position = 0;
             var md5 = MD5.Create();
             var hash = md5.ComputeHash(stream);
 
