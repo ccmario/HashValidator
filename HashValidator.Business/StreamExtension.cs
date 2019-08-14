@@ -10,6 +10,7 @@ namespace HashValidator.Business
     {
         public static string ConvertToText(this Stream input, Encoding encoding)
         {
+            input.Position = 0;
             StreamReader reader = new StreamReader(input, encoding);
             return reader.ReadToEnd();
         }
