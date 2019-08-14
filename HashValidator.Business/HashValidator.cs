@@ -9,25 +9,13 @@ namespace HashValidator.Business
     {
         private static readonly Encoding _defaultEnconding = Encoding.GetEncoding("iso-8859-1");
         private static readonly string _urlSchema = "http://www.ans.gov.br/padroes/tiss/schemas";
+        private static readonly string _epilogo = "epilogo";
+        private static readonly string _hash = "hash";
 
-        private static HashResult GenerateHashResult(XDocument xml, XNamespace xmlNamespace)
+        private static Stream GenerateHashContent(XDocument xml, XNamespace nameSpace)
         {
-            try
-            {
-                var reportedHash = xml.Descendants(xmlNamespace + "hash").FirstOrDefault()?.Value ?? string.Empty;
-                var contentHash = GenerateHashContent(xml, xmlNamespace);
-                return new HashResult(reportedHash, contentHash.CalculateMd5(), contentHash.ConvertToText(_defaultEnconding));
-            }
-            finally
-            {
-                xml.RemoveNodes();
-            }
-        }
-
-        private static Stream GenerateHashContent(XDocument xml, XNamespace ns)
-        {
-            xml.Root.Descendants(ns + "epilogo").Remove();
-            xml.Root.Descendants(ns + "hash").Remove();
+            xml.Root.Descendants(nameSpace + _epilogo).Remove();
+            xml.Root.Descendants(nameSpace + _hash).Remove();
 
             var memoryStream = new MemoryStream();
             var streamWriter = new StreamWriter(memoryStream, _defaultEnconding, 1024);
@@ -60,7 +48,10 @@ namespace HashValidator.Business
         public static HashResult ValidateHash(string xmlString)
         {
             var xml = xmlString.CreateXDocument(_defaultEnconding);
-            return GenerateHashResult(xml, GetNamespace(xml));
+            var xmlNamespace = GetNamespace(xml);
+            var reportedHash = xml.Descendants(xmlNamespace + _hash).FirstOrDefault()?.Value ?? string.Empty;
+            var contentHash = GenerateHashContent(xml, xmlNamespace);
+            return new HashResult(reportedHash, contentHash.CalculateMd5(), contentHash.ConvertToText(_defaultEnconding));
         }
 
     }

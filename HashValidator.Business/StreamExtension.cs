@@ -22,7 +22,9 @@ namespace HashValidator.Business
 
             var sb = new StringBuilder();
             foreach (var i in hash)
+            {
                 sb.Append(i.ToString("x2"));
+            }
 
             Array.Clear(hash, 0, hash.Length);
             return sb.ToString();
