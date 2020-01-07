@@ -20,7 +20,7 @@ namespace HashValidator
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
             services.Configure<IISOptions>(options =>
             {
@@ -54,7 +54,7 @@ namespace HashValidator
 
             app.UseEndpoints(routes =>
             {
-                routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                routes.MapControllerRoute("default", "{controller}/{action=Index}/{id?}");
             });
 
             app.UseSpa(spa =>
