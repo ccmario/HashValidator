@@ -2,7 +2,7 @@
 Exemplo de aplicativo para cálculo de HASH de mensagem XML no padrão TISS.
 
 ## Informações
-Aplicativo Angular padrão utilizando ASP NET CORE 2.2.
+Aplicativo Angular padrão utilizando ASP NET CORE 3.1.
 
 ## Objetivo
 A finalidade deste repositório é demonstrar uma maneira de se calcular o HASH de mensagens XML´s trafegadas no padrão TISS conforme requisitos definidos pela ANS na documentação oficial (disponível em 
