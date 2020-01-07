@@ -39,7 +39,7 @@
                 "build"
             ],
             "dockerBuild": {
-                "tag": "hashvalidator:dev",
+                "tag": "hash-validator:dev",
                 "target": "base",
                 "dockerfile": "${workspaceFolder}/Dockerfile",
                 "context": "${workspaceFolder}"
@@ -55,7 +55,7 @@
                 "build"
             ],
             "dockerBuild": {
-                "tag": "hashvalidator:latest",
+                "tag": "hash-validator:latest",
                 "dockerfile": "${workspaceFolder}/Dockerfile",
                 "context": "${workspaceFolder}"
             },
