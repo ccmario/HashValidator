@@ -42,10 +42,3 @@ export class HashComponent implements OnInit {
     (<HTMLInputElement>document.getElementById('file-content')).value = this.reader.result.toString();
   }
 }
-
-interface HashResult {
-  reportedHash: string;
-  calculatedHash: string;
-  content: string;
-}
-
